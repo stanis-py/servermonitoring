@@ -1,0 +1,17 @@
+{
+    "id": "servermonitoring",
+    "name": "Server Monitoring",
+    "description": "Monitor and manage game servers from a central dashboard",
+    "version": "1.0.0",
+    "url": "https://azuriom.com/market/resources/servermonitoring",
+    "authors": [
+        "Azuriom"
+    ],
+    "azuriom_api": "1.1.0",
+    "providers": [
+        "\\Azuriom\\Plugin\\ServerMonitoring\\Providers\\ServerMonitoringServiceProvider",
+        "\\Azuriom\\Plugin\\ServerMonitoring\\Providers\\RouteServiceProvider"
+    ],
+    "apiId": 0,
+    "admin-only": true
+}
