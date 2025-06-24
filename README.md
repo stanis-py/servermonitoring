@@ -11,24 +11,36 @@ A comprehensive server monitoring plugin for Azuriom that allows administrators 
 - **API Integration:** Connect with server launcher applications to control server processes
 - **Admin Dashboard:** Intuitive interface for monitoring all your servers at once
 
+## Integration with ServerStarter
+
+This plugin is designed to work seamlessly with [ServerStarter](https://github.com/stanis-py/ServerStarter), a robust Windows application for managing multiple server processes. The integration provides:
+
+- Remote management of your servers through the Azuriom CMS web interface
+- Real-time monitoring of server status
+- Access to server logs from the CMS dashboard
+- Ability to start, stop, and restart servers remotely
+- Auto-restart configuration management
+
+The plugin communicates with ServerStarter via its REST API to provide these features.
+
 ## Requirements
 
 - Azuriom CMS
 - PHP 8.0 or higher
-- Running server launcher application with API access
+- Running [ServerStarter](https://github.com/stanis-py/ServerStarter) application with API access enabled
 
 ## Installation
 
 1. Download the plugin from the [GitHub repository](https://github.com/stanis-py/servermonitoring)
 2. Install it through your Azuriom admin panel (or extract to the `plugins` directory)
 3. Enable the plugin in the admin panel
-4. Configure connection settings to your server launcher
+4. Configure connection settings to your ServerStarter instance
 
 ## Configuration
 
 Navigate to the plugin's admin panel to configure:
 
-1. Server Launcher Host (default: 127.0.0.1)
+1. ServerStarter Host (default: 127.0.0.1)
 2. API Port (default: 8080)
 3. API Key (required for authentication)
 
@@ -56,7 +68,7 @@ You can also perform bulk actions on all servers at once.
 
 ### API Integration
 
-The plugin communicates with your server launcher through a REST API, supporting these endpoints:
+The plugin communicates with ServerStarter through a REST API, supporting these endpoints:
 
 - `/status` - Get server status information
 - `/start` - Start a server or all servers
